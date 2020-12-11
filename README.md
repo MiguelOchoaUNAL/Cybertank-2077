@@ -10,7 +10,6 @@ Los drones se mueven en posiciones y velocidades aleatorias, y cada vez que son 
 
 ---------------------------------------------------| r e g l a s |-------------------------------------------------------------
 
-
 1. Por default el jugador tiene 3 balas, que se reducen en cada disparo.
 2. Si se destruye un dron, se mantiene igual la cantidad de balas y aumenta el puntaje.
 3. Si se destruyen ambos drones en un mismo disparo, se aumenta la cantidad de balas y puntaje.
@@ -18,9 +17,8 @@ Los drones se mueven en posiciones y velocidades aleatorias, y cada vez que son 
 
 ------------------------------------------------| c o n t r o l e s |---------------------------------------------------
 
-
-A) Izquierda.
-D) Derecha.
-FLECHA DERECHA ~ Apuntado frontal.
-FLECHA ARRIBA ~ Apuntado de 45°.
-BARRA ESPACIADORA ~ Disparo.
+A ~ Izquierda. |
+D ~ Derecha.
+FLECHA DERECHA ~ Apuntado frontal. |
+FLECHA ARRIBA ~ Apuntado de 45°. |
+BARRA ESPACIADORA ~ Disparo. |

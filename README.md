@@ -8,7 +8,7 @@ Los drones se mueven en posiciones y velocidades aleatorias, y cada vez que son 
 
 
 
----------------------------------------------------r e g l a s-------------------------------------------------------------
+---------------------------------------------------| r e g l a s |-------------------------------------------------------------
 
 
 1. Por default el jugador tiene 3 balas, que se reducen en cada disparo.
@@ -16,7 +16,7 @@ Los drones se mueven en posiciones y velocidades aleatorias, y cada vez que son 
 3. Si se destruyen ambos drones en un mismo disparo, se aumenta la cantidad de balas y puntaje.
 4. Si el tanque se queda sin balas, hay GAME OVER.
 
----------------------------------------------------c o n t r o l e s---------------------------------------------------
+------------------------------------------------| c o n t r o l e s |---------------------------------------------------
 
 
 A ~ Izquierda.

@@ -16,7 +16,7 @@ Los drones se mueven en posiciones y velocidades aleatorias, y cada vez que son 
 3. Si se destruyen ambos drones en un mismo disparo, se aumenta la cantidad de balas y puntaje.
 4. Si el tanque se queda sin balas, hay GAME OVER.
 
-------------------------------------c o n t r o l e s-----------------------------------------
+---------------------------------------------------c o n t r o l e s---------------------------------------------------
 
 
 A ~ Izquierda.

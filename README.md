@@ -17,8 +17,8 @@ Los drones se mueven en posiciones y velocidades aleatorias, y cada vez que son 
 
 ------------------------------------------------| c o n t r o l e s |---------------------------------------------------
 
-A ~ Izquierda. |
-D ~ Derecha. |
-→ ~ Apuntado frontal. |
-↑ ~ Apuntado de 45°. |
+A) Izquierda. |
+D) Derecha. |
+→) Apuntado frontal. |
+↑) Apuntado de 45°. |
 BARRA ESPACIADORA ~ Disparo. |

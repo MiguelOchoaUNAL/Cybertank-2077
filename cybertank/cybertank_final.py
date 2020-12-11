@@ -123,7 +123,7 @@ def tanque_izq():
         cuerpo.setx(-390)  # Se mantiene en el borde hasta que se mueva a la derecha.
 
 
-# Movimiento hacia derecha:
+# Movimiento hacia derecha (mismo procedimiento que en tanque_izq():
 def tanque_der():
     global cux, bax, bax45
     cux = cuerpo.xcor()
@@ -158,15 +158,16 @@ def apunte45():
     dfr = False
     cuerpo.shape('cu45.gif')  # Cambia el sprite del tanque.
 
-
-def coldron1(coldron1):
+# Colision con dron 1:
+def coldron1(coldron1): 
     global Balas, Puntos
-    if coldron1 is True:
-        dron1.shape('exp_dron.gif')
+    if coldron1 is True:  # Si hay colision
+        dron1.shape('exp_dron.gif')  # Cambia el dron por sprite de explosion.
         dron1.speed(1)
-        dron1.goto(dron1.xcor(), dron1.ycor())
+         # Esconde y lleva el dron fuera de la pantalla:
+        dron1.goto(dron1.xcor(), dron1.ycor()) 
         dron1.ht()
-        dron1.shape('dronr.gif')
+        dron1.shape('dronr.gif') 
         dron1.speed(0)
         dron1.goto(-950, 0)
         dron1.speed(random.randint(1, 4))
@@ -205,7 +206,8 @@ def disparo():
             x = bax + a  # Suma a la posición del tanque la comp. en 'x'.
             y = bay + b  # Suma a la posición del tanque la comp. en 'y'.
             bala.goto(x, y)  # Lleva la bala a (x, y).
-
+            
+            # Si la distancia de los centros entre la bala y el dron son menores a 25 pixeles, se considera colision:
             if abs(bala.xcor() - dron1.xcor()) < 25 and abs(bala.ycor() - dron1.ycor()) < 25:
                 cgeneral = True
                 coldron1(True)

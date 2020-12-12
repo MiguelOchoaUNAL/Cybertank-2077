@@ -28,15 +28,15 @@ Puntos = 0  # Aumenta cada vez que se destruye un dron.
 # Fondo de pantalla y Filehandlers:
 turtle.setup(width=848, height=480)  # Determina el ancho y alto de la ventana.
 turtle.speed(0)  # El fondo de pantalla se muestra inmediatamente.
-turtle.bgpic("bg.gif")  # Determina el archivo usado para el fondo.
-turtle.register_shape("bg.gif")  # Registra el archivo para poder ser usado.
-turtle.register_shape('cu45.gif')
-turtle.register_shape("cufr.gif")
-turtle.register_shape('piso.gif')
-turtle.register_shape('explosion.gif')
-turtle.register_shape('exp_dron.gif')
-turtle.register_shape('dronb.gif')
-turtle.register_shape('dronr.gif')
+turtle.bgpic("recursos/bg.gif")  # Determina el archivo usado para el fondo.
+turtle.register_shape("recursos/bg.gif")  # Registra el archivo para poder ser usado.
+turtle.register_shape('recursos/cu45.gif')
+turtle.register_shape("recursos/cufr.gif")
+turtle.register_shape('recursos/piso.gif')
+turtle.register_shape('recursos/explosion.gif')
+turtle.register_shape('recursos/exp_dron.gif')
+turtle.register_shape('recursos/dronb.gif')
+turtle.register_shape('recursos/dronr.gif')
 
 # Titulo de balas:
 letra = turtle.Turtle()  # Genera un Turtle nuevo.
@@ -59,7 +59,7 @@ letra2.goto(200, 180)  # Lleva el Turtle hasta la posicion (x, y).
 letra2.write('Puntos:0', align='left', font=('courier', 25, 'normal'))
 
 # Piso:
-piso = turtle.Turtle(shape="piso.gif", visible=False)
+piso = turtle.Turtle(shape="recursos/piso.gif", visible=False)
 piso.speed(0)
 piso.ht()
 piso.pu()
@@ -67,7 +67,7 @@ piso.goto(0, -265)
 piso.st()
 
 # Cuerpo del tanque (Por default apunta frontalmente):
-cuerpo = turtle.Turtle(shape='cufr.gif', visible=False)
+cuerpo = turtle.Turtle(shape='recursos/cufr.gif', visible=False)
 cuerpo.speed(0)
 cuerpo.ht()
 cuerpo.pu()
@@ -83,7 +83,7 @@ bala.ht()
 bala.pu()
 
 # Enemigos:
-dron1 = turtle.Turtle(shape='dronr.gif', visible=False)
+dron1 = turtle.Turtle(shape='recursos/dronr.gif', visible=False)
 dron1.speed(0)
 dron1.color('red')
 dron1.ht()
@@ -92,7 +92,7 @@ dron1.goto(random.randint(-250, 250), 0)
 dron1.speed(1)  # Modifica la velocidad del dron.
 dron1.st()
 
-dron2 = turtle.Turtle(shape='dronr.gif', visible=False)
+dron2 = turtle.Turtle(shape='recursos/dronr.gif', visible=False)
 dron2.speed(0)
 dron2.color('blue')
 dron2.ht()
@@ -149,25 +149,25 @@ def apuntefr():
     global d45, dfr
     d45 = False  # Muestra que se esta apuntando frontalmente.
     dfr = True
-    cuerpo.shape('cufr.gif')  # Cambia el sprite del tanque.
+    cuerpo.shape('recursos/cufr.gif')  # Cambia el sprite del tanque.
 
 
 def apunte45():
     global d45, dfr
     d45 = True  # Muestra que se esta apuntando en 45 grados.
     dfr = False
-    cuerpo.shape('cu45.gif')  # Cambia el sprite del tanque.
+    cuerpo.shape('recursos/cu45.gif')  # Cambia el sprite del tanque.
 
 # Colision con dron 1:
 def coldron1(coldron1): 
     global Balas, Puntos
     if coldron1 is True:  # Si hay colision
-        dron1.shape('exp_dron.gif')  # Cambia el dron por sprite de explosion.
+        dron1.shape('recursos/exp_dron.gif')  # Cambia el dron por sprite de explosion.
         dron1.speed(1)
          # Esconde y lleva el dron fuera de la pantalla:
         dron1.goto(dron1.xcor(), dron1.ycor()) 
         dron1.ht()
-        dron1.shape('dronr.gif') 
+        dron1.shape('recursos/dronr.gif') 
         dron1.speed(0)
         dron1.goto(-950, 0)
         dron1.speed(random.randint(1, 4))
@@ -180,11 +180,11 @@ def coldron1(coldron1):
 def coldron2(coldron2):
     global Balas, Puntos
     if coldron2 is True:
-        dron2.shape('exp_dron.gif')
+        dron2.shape('recursos/exp_dron.gif')
         dron2.speed(1)
         dron2.goto(dron2.xcor(), dron2.ycor())
         dron2.ht()
-        dron2.shape('dronr.gif')
+        dron2.shape('recursos/dronr.gif')
         dron2.speed(0)
         dron2.goto(950, 0)
         dron2.speed(random.randint(1, 4))
@@ -218,7 +218,7 @@ def disparo():
 
             bala.pendown()  # Dibuja la trayectoria de la bala.
             bala.st()  # Dibuja la bala en cada parte de la trayectoria.
-        bala.shape('explosion.gif')  # Al final de la trayectoria se realiza una explosión.
+        bala.shape('recursos/explosion.gif')  # Al final de la trayectoria se realiza una explosión.
         bala.clear()  # Se reinicia el trayecto de la bala.
         bala.penup()
         bala.ht()
@@ -243,7 +243,7 @@ def disparo():
 
             bala.pendown()
             bala.st()
-        bala.shape('explosion.gif')
+        bala.shape('recursos/explosion.gif')
         bala.clear()
         bala.penup()
         bala.ht()
